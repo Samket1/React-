@@ -36,8 +36,8 @@
 }
 
 .card {
-  background: var(--code-bg);
-  border: 1px solid var(--border);
+  background: #1e293b;
+  border: 1px solid #334155;
   border-radius: 16px;
   padding: 28px 24px;
   text-align: left;
@@ -46,34 +46,199 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  color: #f8fafc;
 }
 
 .page-dark {
-  background-color: #0f172a !important;
+  background-color: #0b0f19 !important;
   color: #f8fafc !important;
   min-height: 100vh;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   h1,
   h2,
-  p {
+  p,
+  subtitle {
     color: #f8fafc !important;
   }
 }
 
 .page-light {
-  background-color: #8bc5ff !important;
+  background-color: #f8fafc !important;
   color: #0f172a !important;
   min-height: 100vh;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   h1,
   h2,
-  p {
+  p,
+  subtitle {
     color: #0f172a !important;
   }
 }
+
+/* 🔘 Automatically styles EVERY button in your app! */
+button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid #475569;
+  background: #334155;
+  color: #f8fafc;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 6px 4px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ☀️ Automatically makes buttons match Light Mode! */
+.page-light button,
+.card-light button {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.page-light button:hover,
+.card-light button:hover {
+  background: #f1f5f9;
+}
+
+/* 🔘 Automatically styles EVERY button in your app! */
+button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid #475569;
+  background: #334155;
+  color: #f8fafc;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 6px 4px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ☀️ Automatically makes buttons match Light Mode! */
+.page-light button,
+.card-light button {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.page-light button:hover,
+.card-light button:hover {
+  background: #f1f5f9;
+}
+
+.card-light {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
+  color: #0f172a !important;
+}
+
+.card-light h2,
+.card-light p,
+.card-light subtitle {
+  color: #0f172a !important;
+}
+
+/* ============================
+   🎨 Modern Button Styles
+============================ */
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+}
+
+.btn-secondary {
+  background: #334155;
+  color: #f8fafc !important;
+  border: 1px solid #475569;
+}
+
+.card-light .btn-secondary {
+  background: #f1f5f9;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  min-width: 40px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 14px 0;
+}
+
+
+
 
 
 
