@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import InputLesson from './InputLesson.jsx'
+import InputChallenge from './InputChallenge.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <InputLesson />
+    <InputChallenge />
   </StrictMode>,
 )
