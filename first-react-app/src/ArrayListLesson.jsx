@@ -4,7 +4,7 @@ import { useState } from 'react'
 function ArrayListLesson() {
   return (
     <div className="container">
-      <h1 className="header">Lesson 5: Arrays in State & Dynamic Lists 📋⚡</h1>
+      <h1 className="header">Dynamic Tasks & Lists 📋</h1>
     </div>
   )
 }
