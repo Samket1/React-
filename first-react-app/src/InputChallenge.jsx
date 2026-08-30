@@ -9,14 +9,13 @@ function InputChallenge() {
   return (
     <div className="container">
       <h1 className="header">Social Post Composer Challenge 🐦✨</h1>
-      <input className="input-field" type="text" placeholder="Author's Name  (e.g. @johndoe)..."
+      <input style={{ textTransform: "capitalize" }} className="input-field" type="text" placeholder="Author's Name  (e.g. @johndoe)..."
         value={author} onChange={(e) => setAuthor(e.target.value)} />
       <input className="input-field" type="text" placeholder="💭What's on your mind?"
         value={post} onChange={(e) => setPost(e.target.value)} />
-
       <div className='card'>
-        <h2>{author ? author : "Anonymous User"}</h2>
-        <p>{post ? post : "No Post Yet"}</p>
+        <h2 style={{ textTransform: 'capitalize' }}>{author ? author : "Anonymous User"}</h2>
+        <p style={{ color: (post.length >= 100 && "red") }}>{post ? post : "No Post Yet"}</p>
         <subtitle style={{ color: '#777777ff' }}>
           Characters: {post.length < 100 ? `${post.length}/100` : 'Max Character'}
         </subtitle>
