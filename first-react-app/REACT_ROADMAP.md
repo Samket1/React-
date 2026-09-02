@@ -73,6 +73,28 @@ A complete breakdown of our React curriculum, tracking everything accomplished a
   * Multi-view apps without page reloads
   * Setting up `<Routes>`, `<Route>`, and `<Link>`
   * Dynamic URL parameters (`useParams`) and programmatic navigation (`useNavigate`)
+---
+
+## 🏗️ Phase 7: React Grand Finale
+* [ ] **Lesson 8: The React Capstone Project**
+  * Building a complete, multi-page web application integrating everything learned so far!
+
+---
+
+## 🚀 Phase 8: Full-Stack Mastery (MERN Stack)
+* [ ] **Lesson 9: Intro to the Back-End & Node.js / Express**
+  * What is a server? Setting up your own Express.js API.
+  * Building your first API endpoints (GET, POST, PUT, DELETE).
+* [ ] **Lesson 10: MongoDB & Mongoose (Databases)**
+  * Designing a real NoSQL Database to permanently save your data.
+  * Storing and querying data collections.
+* [ ] **Lesson 11: Full CRUD Operations in MERN**
+  * **C**reate: Sending new data from React to MongoDB.
+  * **R**ead: Fetching data from MongoDB to display in React.
+  * **U**pdate: Modifying existing data (like marking a bounty complete!).
+  * **D**elete: Removing data from the database.
+* [ ] **Lesson 12: Authentication & The Final Full-Stack App**
+  * Logging in, saving user sessions, and deploying your MERN stack app to the real internet!
 
 ---
 
