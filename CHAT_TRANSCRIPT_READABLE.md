@@ -3577,7 +3577,8 @@ It should return a <div className='card'> displaying:
 An <h3> for the dish name (props.name)
 A <p> for the price (props.price)
 A <p> for the category (e.g. props.category like "Pizza", "Burger", "Dessert")
-if i wrote something and im not sure if im wrong u tell me like before but if im write and there is nothing to add u say Yes and then move on and say like 2️⃣ Goal 2: Create the foodMenu Array
+
+if i wrote something and im not sure if im wrong u tell me like before but if im write and there is nothing to add u say Yes and then move on and say like 2️⃣ Goal 2: Create the foodMenu Array
 
 
 </USER_REQUEST>
@@ -12171,7 +12172,8 @@ Add that button, save, and click Delete on any skill—watch that specific card 
 
 <USER_REQUEST>
 Notice on Line 23 there is a stray lonely } floating above the .map():
-is there now 
+
+is there now 
 and tell me only step 1 and then i will tell u to tell me when im done
 </USER_REQUEST>
 <ADDITIONAL_METADATA>
@@ -12471,7 +12473,8 @@ Does seeing why we use `(_, i)` to target the exact position number make complet
 
 <USER_REQUEST>
 Because we don't need Input 1, professional developers write an underscore _ as a throwaway variable:
-so what about the value that was there will be a garbage value or what?
+
+so what about the value that was there will be a garbage value or what?
 
 </USER_REQUEST>
 <ADDITIONAL_METADATA>
