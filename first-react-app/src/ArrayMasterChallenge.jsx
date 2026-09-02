@@ -7,7 +7,8 @@ function ArrayMasterChallenge() {
   return (
     <div className="container">
       <h1 className="header">RPG Inventory & Loot Bag Challenge 🎒⚔️</h1>
-      <input type="text" placeholder='New PlayList here...' value={newPlaylist} onChange={(e) => setNewPlayList(e.target.value)} />
+      <p style={{ color: "#595959ff" }}>Current PlayLists: {playlist.length}</p>
+      <input type="text" style={{ fontStyle: "Bold" }} placeholder='New PlayList here...' value={newPlaylist} onChange={(e) => setNewPlayList(e.target.value)} />
       <button onClick={() => {
         setPlayList([...playlist, newPlaylist])
         setNewPlayList('')
@@ -20,6 +21,8 @@ function ArrayMasterChallenge() {
           </div>
         )
       )}
+      <button onClick={() => setPlayList([])}>🗑️ Clear ALL</button>
+      <p style={{ color: '#9b9b9bff', opacity: "30%" }}>{playlist.length === 0 && "Your PlayList is Empty"}</p>
 
 
     </div>
