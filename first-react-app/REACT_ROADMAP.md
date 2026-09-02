@@ -52,10 +52,12 @@ A complete breakdown of our React curriculum, tracking everything accomplished a
   * Adding items immutably using the Spread Operator: `[...items, newItem]`
   * Rendering state lists dynamically with `.map()`
   * Deleting/removing items cleanly with `.filter()`
-* [ ] **Part 5: Grand Finale Boss Challenge** 📍 *(NEXT UP!)*
-  * Building a complete interactive Mini-App combining all 4 state types!
+* [x] **Part 5: Grand Finale Boss Challenge** ✅
+  * Built full Cyberpunk Bounty HQ Mini-App combining all 4 state types, custom child components with props, mapping, filtering, and dynamic UI themes!
 
 ---
+
+## 🧭 Lesson 6: Lifecycle, `useEffect`, & Fetching Real-World APIs 📍 *(NEXT UP!)*
 
 ## 🔮 Phase 5: Side Effects & Real-World Data *(Upcoming)*
 * [ ] **Lesson 6: The `useEffect` Hook & APIs**
