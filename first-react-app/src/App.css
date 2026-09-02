@@ -36,6 +36,7 @@
 }
 
 .card {
+  margin-top: 20px;
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 16px;
