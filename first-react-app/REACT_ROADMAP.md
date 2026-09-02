@@ -4,6 +4,8 @@ A complete breakdown of our React curriculum, tracking everything accomplished a
 
 ---
 
+# 🖥️ PART 1: THE FRONT-END (React)
+
 ## 🟢 Phase 1: React Foundations & JSX *(Completed ✅)*
 * [x] **Lesson 1: Components & JSX Structure**
   * Creating functional components (`function App()`, `export default`)
@@ -80,6 +82,8 @@ A complete breakdown of our React curriculum, tracking everything accomplished a
   * Building a complete, multi-page web application integrating everything learned so far!
 
 ---
+
+# 🗄️ PART 2: THE BACK-END (Node, Express, MongoDB)
 
 ## 🚀 Phase 8: Full-Stack Mastery (MERN Stack)
 * [ ] **Lesson 9: Intro to the Back-End & Node.js / Express**
