@@ -2,15 +2,21 @@ import './App.css'
 import { useState } from 'react'
 
 function ArrayListLesson() {
-  const [foods, setFoods] = useState(["🍕 Pepperoni Pizza", "🍔 Double Cheeseburger", "🌮 Street Tacos", "🍣 Salmon Sushi"])
+  const [skills, setSkills] = useState([
+    "⚛️ React.js",
+    "🟨 Modern JavaScript",
+    "🎨 Vanilla CSS",
+    "⚡ Vite Tooling"
+  ])
 
   return (
     <div className="container">
-      <h1 className="header">Mapping Drill: Round 2 of 3 🍕🍔</h1>
-      {foods.map((junks, index) => (
-        <div className='card'> c</div>
-      ))}
-    </div>
+      <h1 className="header">Mapping Drill: Round 3 of 3 ⚡💻</h1>
+      {skills.map((Sz, index) => (
+        <div className='card' style={{ marginTop: '20px' }}>
+          {Sz}
+        </div>))}
+    </div >
   )
 }
 
