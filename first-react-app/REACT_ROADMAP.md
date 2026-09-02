@@ -47,12 +47,12 @@ A complete breakdown of our React curriculum, tracking everything accomplished a
   * Live text preview cards & real-time character counters (`text.length`)
   * Dynamic conditional styling: `style={{ color: (length >= 100 ? "red" : "inherit") }}`
   * Multi-input state resets (Clear buttons)
-* [ ] **Part 4: Arrays in State (Dynamic Lists)** 📍 *(NEXT UP!)*
+* [x] **Part 4: Arrays in State (Dynamic Lists)** ✅
   * `useState([])` for storing lists of data
   * Adding items immutably using the Spread Operator: `[...items, newItem]`
   * Rendering state lists dynamically with `.map()`
   * Deleting/removing items cleanly with `.filter()`
-* [ ] **Part 5: Grand Finale Boss Challenge**
+* [ ] **Part 5: Grand Finale Boss Challenge** 📍 *(NEXT UP!)*
   * Building a complete interactive Mini-App combining all 4 state types!
 
 ---

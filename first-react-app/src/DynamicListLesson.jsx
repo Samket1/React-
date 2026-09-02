@@ -24,7 +24,7 @@ function DynamicListLesson() {
       {skills.map((skill, index) => (
         <div className="card" style={{ marginTop: "16px" }} key={index}>
           <h3>{skill}</h3>
-          <button className='btn' >  🗑️ Delete
+          <button className='btn' onClick={() => setSkills(skills.filter((_, i) => (i !== index)))} >  🗑️ Delete
           </button>
         </div>
       ))}
