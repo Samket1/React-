@@ -2,15 +2,13 @@ import './App.css'
 import { useState } from 'react'
 
 function ArrayListLesson() {
-  const [tasks, setTasks] = useState(["Buy Groceries", "Finish Homework", "Hit the Gym"])
+  const [foods, setFoods] = useState(["🍕 Pepperoni Pizza", "🍔 Double Cheeseburger", "🌮 Street Tacos", "🍣 Salmon Sushi"])
+
   return (
     <div className="container">
-      <h1 className="header">Dynamic Tasks & Lists 📋</h1>
-      {tasks.map((task, index) => (
-        <div style={{ marginBottom: "12px" }} className='card'
-          key={index}>
-          <h3>📌 {task}</h3>
-        </div>
+      <h1 className="header">Mapping Drill: Round 2 of 3 🍕🍔</h1>
+      {foods.map((junks, index) => (
+        <div className='card'> c</div>
       ))}
     </div>
   )
