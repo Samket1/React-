@@ -39,16 +39,16 @@
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 16px;
-  padding: 28px 24px;
+  padding: 24px;
   text-align: left;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px -4px rgba(99, 102, 241, 0.15), 0 2px 6px rgba(0, 0, 0, 0.4);
   color: #f8fafc;
 }
+
 
 .page-dark {
   background-color: #0b0f19 !important;
@@ -78,9 +78,12 @@
   }
 }
 
-/* 🔘 Automatically styles EVERY button in your app! */
-button {
-  padding: 8px 16px;
+/* ============================
+   🔘 Global Button Styles
+============================ */
+button,
+.btn {
+  padding: 10px 18px;
   border-radius: 10px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -88,69 +91,61 @@ button {
   border: 1px solid #475569;
   background: #334155;
   color: #f8fafc;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.08s ease;
   margin: 6px 4px;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+/* ✨ Hover State: Radiant Indigo Glow */
+button:hover,
+.btn:hover {
+  background-color: #4f46e5 !important;
+  border-color: #818cf8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
-button:active {
-  transform: scale(0.96);
+/* ⚡ Active State (When clicked): Snappy instant pressed effect */
+button:active,
+.btn:active {
+  transform: scale(0.95) !important;
+  background-color: #312e81 !important;
+  border-color: #4338ca !important;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.5), 0 0 8px rgba(99, 102, 241, 0.2) !important;
+  transition: all 0.04s ease !important;
 }
 
-/* ☀️ Automatically makes buttons match Light Mode! */
+/* ☀️ Light Mode Button Styles */
 .page-light button,
 .card-light button {
   background: #ffffff;
   color: #0f172a;
   border-color: #cbd5e1;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.08s ease;
 }
 
 .page-light button:hover,
 .card-light button:hover {
-  background: #f1f5f9;
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.45) !important;
 }
 
-/* 🔘 Automatically styles EVERY button in your app! */
-button {
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  border: 1px solid #475569;
-  background: #334155;
-  color: #f8fafc;
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 6px 4px;
+.page-light button:active,
+.card-light button:active {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  transform: scale(0.95) !important;
+  transition: all 0.04s ease !important;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
-button:active {
-  transform: scale(0.99);
-}
-
-/* ☀️ Automatically makes buttons match Light Mode! */
-.page-light button,
-.card-light button {
-  background: #ffffff;
-  color: #0f172a;
-  border-color: #cbd5e1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.page-light button:hover,
-.card-light button:hover {
-  background: #f1f5f9;
-}
 
 .card-light {
   background: #ffffff !important;
@@ -286,27 +281,7 @@ input::placeholder,
 
 
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent), #3b82f6);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent-border);
-  box-shadow: var(--shadow);
-}
-
-.card:hover::before {
-  opacity: 1;
-}
 
 .card-badge-row {
   display: flex;
