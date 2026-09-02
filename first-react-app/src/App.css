@@ -430,3 +430,15 @@ input::placeholder,
   background-color: #ef4444 !important;
   box-shadow: 0 0 20px rgba(239, 68, 68, 0.6) !important;
 }
+
+/* 📦 Out of Stock Notice */
+.ifZero {
+  text-align: center;
+  color: #94a3b8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-top: 30px;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 10px rgba(148, 163, 184, 0.3);
+}
