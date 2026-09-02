@@ -13,7 +13,7 @@ function ArrayListLesson() {
     <div className="container">
       <h1 className="header">Mapping Drill: Round 3 of 3 ⚡💻</h1>
       {skills.map((Sz, index) => (
-        <div className='card' style={{ marginTop: '20px' }}>
+        <div className='card' style={{ marginTop: '20px' }} key={index}>
           {Sz}
         </div>))}
     </div >
