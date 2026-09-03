@@ -31,7 +31,8 @@ function BossChallenge() {
         </button>
       </div>
 
-      <input type='text' placeholder='Enter contract objective...' className="input-field" value={newQuest} onChange={(e) => setNewQuest(e.target.value)} />
+      <input type='text' placeholder='Enter contract objective...' className="input-field" value={newQuest} 
+      onChange={(e) => setNewQuest(e.target.value)} />
       <button className='btn' onClick={() => {
         setBounties([...bounties, newQuest])
         setNewQuest("")
