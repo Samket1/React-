@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import EffectLesson from './EffectLesson.jsx'
+import RickMortyChallenge from './RickMortyChallenge.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <EffectLesson />
+    <RickMortyChallenge />
   </StrictMode>,
 )
