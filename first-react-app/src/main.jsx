@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import CargoChallenge from './CargoChallenge.jsx'
+import EffectLesson from './EffectLesson.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CargoChallenge />
+    <EffectLesson />
   </StrictMode>,
 )
