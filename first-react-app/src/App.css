@@ -172,11 +172,10 @@ button:active,
   color: #0f172a !important;
 }
 
-/* ============================
-   ✍️ Modern Text Input Styles
-============================ */
-/* input,
-input[type="text"],
+/* =========================================================
+   ✍️ Cyber / General Text Input Styles (Scoped to non-food)
+   ========================================================= */
+.cyber-container input,
 .input-field {
   width: 100% !important;
   max-width: 480px !important;
@@ -193,17 +192,16 @@ input[type="text"],
   display: block !important;
   box-sizing: border-box !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-} */
+}
 
-input:focus,
-input[type="text"]:focus,
+.cyber-container input:focus,
 .input-field:focus {
   border-color: #6366f1 !important;
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3) !important;
   background-color: #0f172a !important;
 }
 
-input::placeholder,
+.cyber-container input::placeholder,
 .input-field::placeholder {
   color: #94a3b8 !important;
   opacity: 0.8 !important;
@@ -472,7 +470,8 @@ input::placeholder,
   background-position: center;
   background-repeat: no-repeat;
   filter: blur(12px) brightness(0.35);
-  transform: scale(1.05); /* eliminates blur edges */
+  transform: scale(1.05);
+  /* eliminates blur edges */
   z-index: -1;
 }
 
