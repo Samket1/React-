@@ -31,6 +31,15 @@ import FoodChallenge from './FoodChallenge'
 function Home() {
     const [tab, setTab] = useState("food")
     const [isLoading, setIsLoading] = useState(false)
+
+    useEffect(() => {
+        setIsLoading(true)
+        const timer = setTimeout(() => {
+            setIsLoading(false)
+        }, 500)
+        return () => clearTimeout(timer)
+    }, [tab]
+    )
     return (
         <div className="sidebar-layout">
             {/* 🧭 Left Sidebar Navigation */}
@@ -69,26 +78,33 @@ function Home() {
 
             {/* 🖥️ Main Content Area on the Right */}
             <main className="sidebar-main">
-                {tab === "state-lesson" && <StateLesson />}
-                {tab === "state-challenge" && <StateChallenge />}
-                {tab === "input-lesson" && <InputLesson />}
-                {tab === "input-challenge" && <InputChallenge />}
+                {isLoading ? (<div className="home-loader-container">
+                    <div className="home-spinner"></div>
+                    <p className="home-loader-text">Loading Lab Module...</p>
+                </div>) : (
+                    <div>
+                        {tab === "state-lesson" && <StateLesson />}
+                        {tab === "state-challenge" && <StateChallenge />}
+                        {tab === "input-lesson" && <InputLesson />}
+                        {tab === "input-challenge" && <InputChallenge />}
 
-                {tab === "array-list" && <ArrayListLesson />}
-                {tab === "dynamic-list" && <DynamicListLesson />}
-                {tab === "mapping-rev" && <ComponentMappingRevision />}
-                {tab === "revision" && <Revision />}
-                {tab === "practice" && <Practice />}
+                        {tab === "array-list" && <ArrayListLesson />}
+                        {tab === "dynamic-list" && <DynamicListLesson />}
+                        {tab === "mapping-rev" && <ComponentMappingRevision />}
+                        {tab === "revision" && <Revision />}
+                        {tab === "practice" && <Practice />}
 
-                {tab === "boss-1" && <BossChallenge />}
-                {tab === "boss-2-tech" && <TechStoreChallenge />}
-                {tab === "boss-2-array" && <ArrayMasterChallenge />}
-                {tab === "boss-3-cargo" && <CargoChallenge />}
+                        {tab === "boss-1" && <BossChallenge />}
+                        {tab === "boss-2-tech" && <TechStoreChallenge />}
+                        {tab === "boss-2-array" && <ArrayMasterChallenge />}
+                        {tab === "boss-3-cargo" && <CargoChallenge />}
 
-                {tab === "effect-lesson" && <EffectLesson />}
-                {tab === "rnm" && <RickMortyChallenge />}
-                {tab === "anime" && <AnimeChallenge />}
-                {tab === "food" && <FoodChallenge />}
+                        {tab === "effect-lesson" && <EffectLesson />}
+                        {tab === "rnm" && <RickMortyChallenge />}
+                        {tab === "anime" && <AnimeChallenge />}
+                        {tab === "food" && <FoodChallenge />}
+                    </div>
+                )}
             </main>
         </div>
     )
