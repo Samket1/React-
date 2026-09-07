@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import AnimeChallenge from './AnimeChallenge.jsx'
+import FoodChallenge from './FoodChallenge.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AnimeChallenge />
+    <FoodChallenge />
   </StrictMode>,
 )
