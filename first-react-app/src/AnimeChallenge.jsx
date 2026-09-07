@@ -46,7 +46,7 @@ function AnimeChallenge() {
       <input type="number" placeholder='1,2,3,4,5....' value={search} onChange={(e) => setSearch(e.target.value)} />
       <button onClick={() => setId(search)}>Search </button>
       <h1>Title: {title}</h1>
-      <img style={{ width: "250px", height: "350px", borderRadius: "50px" }} src={im} alt={title} />
+      <img style={{ width: "100%", maxWidth: "200px", height: "auto", maxHeight: "280px", objectFit: "cover", borderRadius: "24px" }} src={im} alt={title} />
       <p>Score: {score}</p>
       <p>Episodes: {epiCount}</p>
       <p>Synopsis: <span style={{ color: "cyan" }}>{syn}</span></p>
