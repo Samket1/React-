@@ -51,18 +51,26 @@ function FoodChallenge() {
 
 
   return (
-    <div className="cyber-container">
-      <h1 className="header">Galactic Recipe Vault 🍳🍕</h1>
-      <input type="text" placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
+    <div className="food-container">
+      <h1 className="food-header">Galactic Recipe Vault 🍳🍕</h1>
+      <div className='food-search-box'>
+        <input className="food-input" type="text" placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={(e) => { if (e.key === 'Enter') setId(search) }} />
+        <button className="food-btn" onClick={() => setId(search)}>Search</button>
+      </div>
       {Load && <p>🍳 Locating Recipe in Global Vault...</p>}
-      <button onClick={() => setId(search)}>Search</button>
-      <h2>Name: {name}</h2>
-      <img src={im} alt="" style={{ width: "300px", height: "300px" }} />
-      <p>Catagory: {cat}</p>
-      <p>Origin: {or}</p>
-      <p>Instruction: {ins}</p>
-      <p className='ifZero'>{Errr}</p>
 
+      <div className="food-card">
+        <h2 className="food-name">Name: {name}</h2>
+        <img className="food-img" src={im} alt="" style={{ width: "300px", height: "300px" }} />
+        <div className="food-badges">
+          <p className="food-badge">Catagory: {cat}</p>
+          <p className="food-badge">Origin: {or}</p>
+        </div>
+        <p className="food-instructions">Instruction: {ins}</p>
+        <p className='food-error'>{Errr}</p>
+
+      </div>
     </div>
   )
 }
