@@ -32,67 +32,43 @@ function Home() {
     const [tab, setTab] = useState("food")
     const [isLoading, setIsLoading] = useState(false)
     return (
-        <div style={{ display: 'flex', minHeight: '100vh', background: '#090d16' }}>
+        <div className="sidebar-layout">
             {/* 🧭 Left Sidebar Navigation */}
-            <nav style={{
-                width: '260px',
-                minWidth: '260px',
-                height: '100vh',
-                position: 'sticky',
-                top: 0,
-                overflowY: 'auto',
-                padding: '24px 16px',
-                boxSizing: 'border-box',
-                background: '#0b0f19',
-                borderRight: '1px solid #1e293b',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
-                zIndex: 100
-            }}>
-                <h2 style={{
-                    fontSize: '1rem',
-                    color: '#94a3b8',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.1em',
-                    margin: '0 0 16px 8px',
-                    fontWeight: 700
-                }}>
-                    ⚡ React Lab
-                </h2>
+            <nav className="sidebar-nav">
+                <h2 className="sidebar-title">⚡ React Lab</h2>
 
                 {/* 1. Basics & State */}
-                <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, margin: '10px 0 4px 8px' }}>STATE & INPUTS</span>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("state-lesson")}>🌱 State Lesson</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("state-challenge")}>⚡ State Challenge</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("input-lesson")}>⌨️ Input Lesson</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("input-challenge")}>💬 Input Challenge</button>
+                <span className="sidebar-section-title">STATE & INPUTS</span>
+                <button className="sidebar-btn" onClick={() => setTab("state-lesson")}>🌱 State Lesson</button>
+                <button className="sidebar-btn" onClick={() => setTab("state-challenge")}>⚡ State Challenge</button>
+                <button className="sidebar-btn" onClick={() => setTab("input-lesson")}>⌨️ Input Lesson</button>
+                <button className="sidebar-btn" onClick={() => setTab("input-challenge")}>💬 Input Challenge</button>
 
                 {/* 2. Lists & Arrays */}
-                <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, margin: '14px 0 4px 8px' }}>LISTS & ARRAYS</span>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("array-list")}>📋 Array List</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("dynamic-list")}>🔄 Dynamic List</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("mapping-rev")}>🗺️ Mapping Revision</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("revision")}>📝 Revision</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("practice")}>🎯 Practice</button>
+                <span className="sidebar-section-title">LISTS & ARRAYS</span>
+                <button className="sidebar-btn" onClick={() => setTab("array-list")}>📋 Array List</button>
+                <button className="sidebar-btn" onClick={() => setTab("dynamic-list")}>🔄 Dynamic List</button>
+                <button className="sidebar-btn" onClick={() => setTab("mapping-rev")}>🗺️ Mapping Revision</button>
+                <button className="sidebar-btn" onClick={() => setTab("revision")}>📝 Revision</button>
+                <button className="sidebar-btn" onClick={() => setTab("practice")}>🎯 Practice</button>
 
                 {/* 3. The 3 Boss Challenges */}
-                <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, margin: '14px 0 4px 8px' }}>BOSS QUESTS</span>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("boss-1")}>⚔️ Boss 1 (RPG Quest)</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("boss-2-tech")}>💻 Boss 2 (Tech Store)</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("boss-2-array")}>👑 Boss 2 (Array Master)</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("boss-3-cargo")}>📦 Boss 3 (Cyber Cargo)</button>
+                <span className="sidebar-section-title">BOSS QUESTS</span>
+                <button className="sidebar-btn" onClick={() => setTab("boss-1")}>⚔️ Boss 1 (RPG Quest)</button>
+                <button className="sidebar-btn" onClick={() => setTab("boss-2-tech")}>💻 Boss 2 (Tech Store)</button>
+                <button className="sidebar-btn" onClick={() => setTab("boss-2-array")}>👑 Boss 2 (Array Master)</button>
+                <button className="sidebar-btn" onClick={() => setTab("boss-3-cargo")}>📦 Boss 3 (Cyber Cargo)</button>
 
                 {/* 4. API & useEffect Series */}
-                <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700, margin: '14px 0 4px 8px' }}>APIs & USE_EFFECT</span>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("effect-lesson")}>⚡ Effect Lesson (PokeAPI)</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("rnm")}>🧪 Rick & Morty Scanner</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("anime")}>⛩️ Anime Intel</button>
-                <button style={{ textAlign: 'left', padding: '10px 14px' }} onClick={() => setTab("food")}>🍳 Recipe Vault</button>
+                <span className="sidebar-section-title">APIs & USE_EFFECT</span>
+                <button className="sidebar-btn" onClick={() => setTab("effect-lesson")}>⚡ Effect Lesson (PokeAPI)</button>
+                <button className="sidebar-btn" onClick={() => setTab("rnm")}>🧪 Rick & Morty Scanner</button>
+                <button className="sidebar-btn" onClick={() => setTab("anime")}>⛩️ Anime Intel</button>
+                <button className="sidebar-btn" onClick={() => setTab("food")}>🍳 Recipe Vault</button>
             </nav>
 
             {/* 🖥️ Main Content Area on the Right */}
-            <main style={{ flex: 1, minWidth: 0, overflowY: 'auto' }}>
+            <main className="sidebar-main">
                 {tab === "state-lesson" && <StateLesson />}
                 {tab === "state-challenge" && <StateChallenge />}
                 {tab === "input-lesson" && <InputLesson />}
