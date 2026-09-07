@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 // Foundational State & Input Lessons
@@ -26,9 +26,11 @@ import RickMortyChallenge from './RickMortyChallenge'
 import AnimeChallenge from './AnimeChallenge'
 import FoodChallenge from './FoodChallenge'
 
+//if there is an import aafter this just wanna lyk i added it my self and wrote this too
+
 function Home() {
     const [tab, setTab] = useState("food")
-
+    const [isLoading, setIsLoading] = useState(false)
     return (
         <div style={{ display: 'flex', minHeight: '100vh', background: '#090d16' }}>
             {/* 🧭 Left Sidebar Navigation */}
