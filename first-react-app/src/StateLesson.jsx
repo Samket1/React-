@@ -15,7 +15,7 @@ function StateLesson() {
 
       <button onClick={() => setIsOpen(!isOpen)}>Switch</button>
       {isOpen && <div className="card"><h3>🎉 Secret Box is OPEN!</h3></div>}
-      {isOpen ? "Close it" : "Open itw"}
+      {isOpen ? "Close it" : "Open it"}
 
     </div>
   )

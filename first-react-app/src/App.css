@@ -173,8 +173,9 @@ button:active,
 }
 
 /* =========================================================
-   ✍️ Cyber / General Text Input Styles (Scoped to non-food)
+   ✍️ Modern Text Input Styles (Explicitly Scoped per Challenge)
    ========================================================= */
+.container input,
 .cyber-container input,
 .input-field {
   width: 100% !important;
@@ -194,6 +195,7 @@ button:active,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
+.container input:focus,
 .cyber-container input:focus,
 .input-field:focus {
   border-color: #6366f1 !important;
@@ -201,6 +203,7 @@ button:active,
   background-color: #0f172a !important;
 }
 
+.container input::placeholder,
 .cyber-container input::placeholder,
 .input-field::placeholder {
   color: #94a3b8 !important;

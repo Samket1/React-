@@ -16,7 +16,7 @@ function StateChallenge() {
         <button onClick={(() => setQuantity(quantity + 1))}>+</button>
         <button onClick={(() => { setQuantity(quantity > 0 ? quantity - 1 : 0) })}>-</button>
         <button onClick={(() => setShowSpec(!showSpecs))}>{showSpecs ? 'Hide' : 'Show'}</button>
-        {showSpecs && <subtitle> adbwabcdiahbwcdipahw </subtitle>}
+        {showSpecs && <subtitle> Hidden Mystery has been revealed hehe </subtitle>}
 
 
 
