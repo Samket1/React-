@@ -23,6 +23,9 @@ function FoodChallenge() {
         return res.json()
       })
       .then(data => {
+        if (!data.meals) {
+          throw new Error("No meals matched that name!")
+        }
         const food = data.meals[0]
 
         setLoad(false)
@@ -61,7 +64,7 @@ function FoodChallenge() {
         </div>
         {Load && <p className='food-loading'>🍳 Locating Recipe in Global Vault...</p>}
 
-        <div className="food-card">
+        {!Errr && (<div className="food-card">
           <h2 className="food-name">Name: {name}</h2>
           <img className="food-img" src={im} alt="" />
           <div className="food-badges">
@@ -69,9 +72,10 @@ function FoodChallenge() {
             <p className="food-badge">Origin: {or}</p>
           </div>
           <p className="food-instructions">Instruction: {ins}</p>
-          <p className='food-error'>{Errr}</p>
-
         </div>
+        )}
+        {Errr && <p className='food-error'>{Errr}</p>
+        }
       </div>
     </div>
   )
