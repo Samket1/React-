@@ -6,11 +6,18 @@ A complete curriculum tracker showing your real-time progress across Front-End a
 
 ## 📊 Overall Progress Dashboard
 
+### ⏱️ Time & Velocity Tracker (Hours & Days)
+* **Active Coding Time Spent:** **~19 to 22 Hours** *(logged across 15 coding sessions)*
+* **Front-End Hours Remaining:** **~7 to 10 Hours** *(~5 to 7 daily sessions)*
+* **Full-Stack Hours Remaining:** **~20 to 26 Hours** *(~14 to 18 daily sessions)*
+
+---
+
 ### 🖥️ Front-End Mastery: **75%** Complete
-`[███████████████░░░░░] 75%` (6 of 8 Milestones Completed)
+`[███████████████░░░░░] 75%` (6 of 8 Milestones Completed — ~7-10 hours remaining)
 
 ### 🌐 Full-Stack Mastery: **50%** Complete
-`[██████████░░░░░░░░░░] 50%` (6 of 12 Total Units Completed)
+`[██████████░░░░░░░░░░] 50%` (6 of 12 Total Units Completed — ~20-26 hours remaining)
 
 ---
 
