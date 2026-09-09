@@ -27,11 +27,14 @@ import AnimeChallenge from './AnimeChallenge'
 import FoodChallenge from './FoodChallenge'
 import StopwatchChallenge from './StopwatchChallenge'
 import TimeoutChallenge from './TimeoutChallenge'
+import RouterLesson from './RouterLesson'
+import RouterChallenge from './RouterChallenge'
+import RouterPractice from './RouterPractice'
 
-//if there is an import aafter this just wanna lyk i added it my self and wrote this too
+//if there is an import after this just wanna lyk i added it my self and wrote this too
 
 function Home() {
-    const [tab, setTab] = useState("timeout")
+    const [tab, setTab] = useState("router-practice")
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
@@ -81,6 +84,9 @@ function Home() {
                         <option value="food">🍳 Recipe Vault</option>
                         <option value="stopwatch">⏱️ Stopwatch Lab</option>
                         <option value="timeout">💣 Timeout Lab</option>
+                        <option value="router">🧭 Router Lab</option>
+                        <option value="router-challenge">🌌 Starfleet Academy</option>
+                        <option value="router-practice">🎧 Audio Deck</option>
                     </optgroup>
                 </select>
             </div>
@@ -112,13 +118,19 @@ function Home() {
                 <button className={`sidebar-btn ${tab === 'boss-3-cargo' ? 'active-nav-btn' : ''}`} onClick={() => setTab("boss-3-cargo")}>📦 Boss 3 (Cyber Cargo)</button>
 
                 {/* 4. API & useEffect Series */}
-                <span className="sidebar-section-title">APIs & USE_EFFECT</span>
+                <span className="sidebar-section-title">APIs & TIMERS</span>
                 <button className={`sidebar-btn ${tab === 'effect-lesson' ? 'active-nav-btn' : ''}`} onClick={() => setTab("effect-lesson")}>⚡ Effect Lesson (PokeAPI)</button>
                 <button className={`sidebar-btn ${tab === 'rnm' ? 'active-nav-btn' : ''}`} onClick={() => setTab("rnm")}>🧪 Rick & Morty Scanner</button>
                 <button className={`sidebar-btn ${tab === 'anime' ? 'active-nav-btn' : ''}`} onClick={() => setTab("anime")}>⛩️ Anime Intel</button>
                 <button className={`sidebar-btn ${tab === 'food' ? 'active-nav-btn' : ''}`} onClick={() => setTab("food")}>🍳 Recipe Vault</button>
                 <button className={`sidebar-btn ${tab === 'stopwatch' ? 'active-nav-btn' : ''}`} onClick={() => setTab("stopwatch")}>⏱️ Stopwatch Lab</button>
                 <button className={`sidebar-btn ${tab === 'timeout' ? 'active-nav-btn' : ''}`} onClick={() => setTab("timeout")}>💣 Timeout Lab</button>
+
+                {/* 5. Phase 6: Multi-Page Routing */}
+                <span className="sidebar-section-title">MULTI-PAGE ROUTING</span>
+                <button className={`sidebar-btn ${tab === 'router' ? 'active-nav-btn' : ''}`} onClick={() => setTab("router")}>🧭 Router Lab</button>
+                <button className={`sidebar-btn ${tab === 'router-challenge' ? 'active-nav-btn' : ''}`} onClick={() => setTab("router-challenge")}>🌌 Starfleet Academy</button>
+                <button className={`sidebar-btn ${tab === 'router-practice' ? 'active-nav-btn' : ''}`} onClick={() => setTab("router-practice")}>🎧 Audio Deck</button>
             </nav>
 
             {/* 🖥️ Main Content Area on the Right */}
@@ -150,6 +162,9 @@ function Home() {
                         {tab === "food" && <FoodChallenge />}
                         {tab === "stopwatch" && <StopwatchChallenge />}
                         {tab === "timeout" && <TimeoutChallenge />}
+                        {tab === "router" && <RouterLesson />}
+                        {tab === "router-challenge" && <RouterChallenge />}
+                        {tab === "router-practice" && <RouterPractice />}
                     </div>
                 )}
             </main>
