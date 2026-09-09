@@ -84,6 +84,15 @@ A complete curriculum tracker showing your real-time progress across Front-End a
 
 ---
 
+## 🎨 Bonus Power Unit: Tailwind CSS Mastery *(Standalone — Doesn't Block Main Progress)*
+* ⏱️ **Estimated Time to Learn:** **~2.5 to 3.5 Hours** (1 to 2 coding sessions)
+* [ ] **Tailwind Setup & Utility Classes** (Paddings `p-4`, Margins `m-2`, Flexbox `flex justify-between`)
+* [ ] **Responsive Breakpoints** (`sm:`, `md:`, `lg:`)
+* [ ] **Hover, Focus & Transitions** (`hover:bg-blue-600 transition-all duration-300`)
+* [ ] **Dark Mode & Styling Components rapidly**
+
+---
+
 ## 🏗️ Phase 7: React Grand Finale *(Upcoming)*
 * [ ] **Lesson 8: The React Capstone Project**
   * Full portfolio-grade multi-page web app integrating all front-end skills.
