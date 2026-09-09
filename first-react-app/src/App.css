@@ -494,6 +494,46 @@ button:active,
   font-size: 0.85rem;
 }
 
+.active-nav-btn {
+  background: rgba(99, 102, 241, 0.25) !important;
+  border-color: #6366f1 !important;
+  color: #a5b4fc !important;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+/* 📱 Mobile Navigation Header (Hidden on Desktop) */
+.mobile-nav-header {
+  display: none;
+}
+
+.mobile-nav-select {
+  width: 100%;
+  background: #0b0f19;
+  color: #f1f5f9;
+  border: 1.5px solid #38bdf8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+  appearance: auto;
+}
+
+.mobile-nav-select optgroup {
+  background: #0f172a;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.mobile-nav-select option {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 8px;
+}
+
 .sidebar-main {
   flex: 1;
   min-width: 0;
@@ -748,32 +788,44 @@ button:active,
    📱 Comprehensive Mobile & Tablet Responsive Media Queries
    ========================================================= */
 @media (max-width: 768px) {
-  /* Layout switches from side-by-side to stacked */
+  /* Layout switches to single column full-screen */
   .sidebar-layout {
     flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
   }
 
-  .sidebar-nav {
+  /* 🚫 Completely hide the crowded desktop sidebar buttons on mobile/tablet */
+  .desktop-sidebar {
+    display: none !important;
+  }
+
+  /* 📱 Show the clean mobile dropdown header at the top */
+  .mobile-nav-header {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #090d16;
+    border-bottom: 1.5px solid #1e293b;
+    padding: 10px 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-nav-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  /* Main area takes 100% full screen width */
+  .sidebar-main {
     width: 100%;
     min-width: 100%;
-    height: auto;
-    max-height: 180px;
-    position: static;
-    border-right: none;
-    border-bottom: 1px solid #1e293b;
-    padding: 12px 10px;
-    overflow-x: auto;
-    overflow-y: auto;
-  }
-
-  .sidebar-title {
-    margin-bottom: 6px;
-    font-size: 0.8rem;
-  }
-
-  .sidebar-main {
-    padding: 10px;
-    width: 100%;
+    padding: 12px;
     box-sizing: border-box;
   }
 

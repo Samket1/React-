@@ -44,40 +44,81 @@ function Home() {
     )
     return (
         <div className="sidebar-layout">
-            {/* 🧭 Left Sidebar Navigation */}
-            <nav className="sidebar-nav">
+            {/* 📱 Mobile Dropdown Menu (Visible on Phones & Tablets) */}
+            <div className="mobile-nav-header">
+                <div className="mobile-nav-title">⚡ React Lab</div>
+                <select
+                    className="mobile-nav-select"
+                    value={tab}
+                    onChange={(e) => setTab(e.target.value)}
+                >
+                    <optgroup label="🌱 1. State & Inputs">
+                        <option value="state-lesson">🌱 State Lesson</option>
+                        <option value="state-challenge">⚡ State Challenge</option>
+                        <option value="input-lesson">⌨️ Input Lesson</option>
+                        <option value="input-challenge">💬 Input Challenge</option>
+                    </optgroup>
+
+                    <optgroup label="📋 2. Lists & Arrays">
+                        <option value="array-list">📋 Array List</option>
+                        <option value="dynamic-list">🔄 Dynamic List</option>
+                        <option value="mapping-rev">🗺️ Mapping Revision</option>
+                        <option value="revision">📝 Revision</option>
+                        <option value="practice">🎯 Practice</option>
+                    </optgroup>
+
+                    <optgroup label="⚔️ 3. Boss Quests">
+                        <option value="boss-1">⚔️ Boss 1 (RPG Quest)</option>
+                        <option value="boss-2-tech">💻 Boss 2 (Tech Store)</option>
+                        <option value="boss-2-array">👑 Boss 2 (Array Master)</option>
+                        <option value="boss-3-cargo">📦 Boss 3 (Cyber Cargo)</option>
+                    </optgroup>
+
+                    <optgroup label="⚡ 4. APIs & Timers">
+                        <option value="effect-lesson">⚡ Effect Lesson (PokeAPI)</option>
+                        <option value="rnm">🧪 Rick & Morty Scanner</option>
+                        <option value="anime">⛩️ Anime Intel</option>
+                        <option value="food">🍳 Recipe Vault</option>
+                        <option value="stopwatch">⏱️ Stopwatch Lab</option>
+                        <option value="timeout">💣 Timeout Lab</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            {/* 🧭 Desktop Left Sidebar Navigation (Hidden on Mobile) */}
+            <nav className="sidebar-nav desktop-sidebar">
                 <h2 className="sidebar-title">⚡ React Lab</h2>
 
                 {/* 1. Basics & State */}
                 <span className="sidebar-section-title">STATE & INPUTS</span>
-                <button className="sidebar-btn" onClick={() => setTab("state-lesson")}>🌱 State Lesson</button>
-                <button className="sidebar-btn" onClick={() => setTab("state-challenge")}>⚡ State Challenge</button>
-                <button className="sidebar-btn" onClick={() => setTab("input-lesson")}>⌨️ Input Lesson</button>
-                <button className="sidebar-btn" onClick={() => setTab("input-challenge")}>💬 Input Challenge</button>
+                <button className={`sidebar-btn ${tab === 'state-lesson' ? 'active-nav-btn' : ''}`} onClick={() => setTab("state-lesson")}>🌱 State Lesson</button>
+                <button className={`sidebar-btn ${tab === 'state-challenge' ? 'active-nav-btn' : ''}`} onClick={() => setTab("state-challenge")}>⚡ State Challenge</button>
+                <button className={`sidebar-btn ${tab === 'input-lesson' ? 'active-nav-btn' : ''}`} onClick={() => setTab("input-lesson")}>⌨️ Input Lesson</button>
+                <button className={`sidebar-btn ${tab === 'input-challenge' ? 'active-nav-btn' : ''}`} onClick={() => setTab("input-challenge")}>💬 Input Challenge</button>
 
                 {/* 2. Lists & Arrays */}
                 <span className="sidebar-section-title">LISTS & ARRAYS</span>
-                <button className="sidebar-btn" onClick={() => setTab("array-list")}>📋 Array List</button>
-                <button className="sidebar-btn" onClick={() => setTab("dynamic-list")}>🔄 Dynamic List</button>
-                <button className="sidebar-btn" onClick={() => setTab("mapping-rev")}>🗺️ Mapping Revision</button>
-                <button className="sidebar-btn" onClick={() => setTab("revision")}>📝 Revision</button>
-                <button className="sidebar-btn" onClick={() => setTab("practice")}>🎯 Practice</button>
+                <button className={`sidebar-btn ${tab === 'array-list' ? 'active-nav-btn' : ''}`} onClick={() => setTab("array-list")}>📋 Array List</button>
+                <button className={`sidebar-btn ${tab === 'dynamic-list' ? 'active-nav-btn' : ''}`} onClick={() => setTab("dynamic-list")}>🔄 Dynamic List</button>
+                <button className={`sidebar-btn ${tab === 'mapping-rev' ? 'active-nav-btn' : ''}`} onClick={() => setTab("mapping-rev")}>🗺️ Mapping Revision</button>
+                <button className={`sidebar-btn ${tab === 'revision' ? 'active-nav-btn' : ''}`} onClick={() => setTab("revision")}>📝 Revision</button>
+                <button className={`sidebar-btn ${tab === 'practice' ? 'active-nav-btn' : ''}`} onClick={() => setTab("practice")}>🎯 Practice</button>
 
                 {/* 3. The 3 Boss Challenges */}
                 <span className="sidebar-section-title">BOSS QUESTS</span>
-                <button className="sidebar-btn" onClick={() => setTab("boss-1")}>⚔️ Boss 1 (RPG Quest)</button>
-                <button className="sidebar-btn" onClick={() => setTab("boss-2-tech")}>💻 Boss 2 (Tech Store)</button>
-                <button className="sidebar-btn" onClick={() => setTab("boss-2-array")}>👑 Boss 2 (Array Master)</button>
-                <button className="sidebar-btn" onClick={() => setTab("boss-3-cargo")}>📦 Boss 3 (Cyber Cargo)</button>
+                <button className={`sidebar-btn ${tab === 'boss-1' ? 'active-nav-btn' : ''}`} onClick={() => setTab("boss-1")}>⚔️ Boss 1 (RPG Quest)</button>
+                <button className={`sidebar-btn ${tab === 'boss-2-tech' ? 'active-nav-btn' : ''}`} onClick={() => setTab("boss-2-tech")}>💻 Boss 2 (Tech Store)</button>
+                <button className={`sidebar-btn ${tab === 'boss-2-array' ? 'active-nav-btn' : ''}`} onClick={() => setTab("boss-2-array")}>👑 Boss 2 (Array Master)</button>
+                <button className={`sidebar-btn ${tab === 'boss-3-cargo' ? 'active-nav-btn' : ''}`} onClick={() => setTab("boss-3-cargo")}>📦 Boss 3 (Cyber Cargo)</button>
 
                 {/* 4. API & useEffect Series */}
                 <span className="sidebar-section-title">APIs & USE_EFFECT</span>
-                <button className="sidebar-btn" onClick={() => setTab("effect-lesson")}>⚡ Effect Lesson (PokeAPI)</button>
-                <button className="sidebar-btn" onClick={() => setTab("rnm")}>🧪 Rick & Morty Scanner</button>
-                <button className="sidebar-btn" onClick={() => setTab("anime")}>⛩️ Anime Intel</button>
-                <button className="sidebar-btn" onClick={() => setTab("food")}>🍳 Recipe Vault</button>
-                <button className="sidebar-btn" onClick={() => setTab("stopwatch")}>⏱️ Stopwatch Lab</button>
-                <button className="sidebar-btn" onClick={() => setTab("timeout")}>💣 Timeout Lab</button>
+                <button className={`sidebar-btn ${tab === 'effect-lesson' ? 'active-nav-btn' : ''}`} onClick={() => setTab("effect-lesson")}>⚡ Effect Lesson (PokeAPI)</button>
+                <button className={`sidebar-btn ${tab === 'rnm' ? 'active-nav-btn' : ''}`} onClick={() => setTab("rnm")}>🧪 Rick & Morty Scanner</button>
+                <button className={`sidebar-btn ${tab === 'anime' ? 'active-nav-btn' : ''}`} onClick={() => setTab("anime")}>⛩️ Anime Intel</button>
+                <button className={`sidebar-btn ${tab === 'food' ? 'active-nav-btn' : ''}`} onClick={() => setTab("food")}>🍳 Recipe Vault</button>
+                <button className={`sidebar-btn ${tab === 'stopwatch' ? 'active-nav-btn' : ''}`} onClick={() => setTab("stopwatch")}>⏱️ Stopwatch Lab</button>
+                <button className={`sidebar-btn ${tab === 'timeout' ? 'active-nav-btn' : ''}`} onClick={() => setTab("timeout")}>💣 Timeout Lab</button>
             </nav>
 
             {/* 🖥️ Main Content Area on the Right */}
