@@ -25,11 +25,13 @@ import EffectLesson from './EffectLesson'
 import RickMortyChallenge from './RickMortyChallenge'
 import AnimeChallenge from './AnimeChallenge'
 import FoodChallenge from './FoodChallenge'
+import StopwatchChallenge from './StopwatchChallenge'
+import TimeoutChallenge from './TimeoutChallenge'
 
 //if there is an import aafter this just wanna lyk i added it my self and wrote this too
 
 function Home() {
-    const [tab, setTab] = useState("food")
+    const [tab, setTab] = useState("timeout")
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
@@ -74,6 +76,8 @@ function Home() {
                 <button className="sidebar-btn" onClick={() => setTab("rnm")}>🧪 Rick & Morty Scanner</button>
                 <button className="sidebar-btn" onClick={() => setTab("anime")}>⛩️ Anime Intel</button>
                 <button className="sidebar-btn" onClick={() => setTab("food")}>🍳 Recipe Vault</button>
+                <button className="sidebar-btn" onClick={() => setTab("stopwatch")}>⏱️ Stopwatch Lab</button>
+                <button className="sidebar-btn" onClick={() => setTab("timeout")}>💣 Timeout Lab</button>
             </nav>
 
             {/* 🖥️ Main Content Area on the Right */}
@@ -103,6 +107,8 @@ function Home() {
                         {tab === "rnm" && <RickMortyChallenge />}
                         {tab === "anime" && <AnimeChallenge />}
                         {tab === "food" && <FoodChallenge />}
+                        {tab === "stopwatch" && <StopwatchChallenge />}
+                        {tab === "timeout" && <TimeoutChallenge />}
                     </div>
                 )}
             </main>

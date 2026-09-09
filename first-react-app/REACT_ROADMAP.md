@@ -7,17 +7,17 @@ A complete curriculum tracker showing your real-time progress across Front-End a
 ## 📊 Overall Progress Dashboard
 
 ### ⏱️ Time & Velocity Tracker (Hours & Days)
-* **Active Coding Time Spent:** **~19 to 22 Hours** *(logged across 15 coding sessions)*
-* **Front-End Hours Remaining:** **~7 to 10 Hours** *(~5 to 7 daily sessions)*
-* **Full-Stack Hours Remaining:** **~20 to 26 Hours** *(~14 to 18 daily sessions)*
+* **Active Coding Time Spent:** **~20 to 23 Hours** *(logged across 16 coding sessions)*
+* **Front-End Hours Remaining:** **~6 to 8 Hours** *(~4 to 6 daily sessions)*
+* **Full-Stack Hours Remaining:** **~19 to 24 Hours** *(~13 to 16 daily sessions)*
 
 ---
 
-### 🖥️ Front-End Mastery: **75%** Complete
-`[███████████████░░░░░] 75%` (6 of 8 Milestones Completed — ~7-10 hours remaining)
+### 🖥️ Front-End Mastery: **80%** Complete
+`[████████████████░░░░] 80%` (7 of 8 Milestones Completed — ~6-8 hours remaining)
 
-### 🌐 Full-Stack Mastery: **50%** Complete
-`[██████████░░░░░░░░░░] 50%` (6 of 12 Total Units Completed — ~20-26 hours remaining)
+### 🌐 Full-Stack Mastery: **58%** Complete
+`[███████████░░░░░░░░░] 58%` (7 of 12 Total Units Completed — ~19-24 hours remaining)
 
 ---
 
@@ -62,7 +62,7 @@ A complete curriculum tracker showing your real-time progress across Front-End a
 
 ---
 
-## 🟡 Phase 5: Side Effects, Timers & APIs — `useEffect` *(Current Unit 🧠⚡ - 80% Completed)*
+## 🟢 Phase 5: Side Effects, Timers & APIs — `useEffect` *(Completed ✅)*
 * [x] **Component Lifecycle & Mounting**: How `useEffect` runs after render
 * [x] **Dependency Array**: Run once `[]` vs on change `[dependency]`
 * [x] **Fetching Real APIs with Error Handling**:
@@ -72,11 +72,11 @@ A complete curriculum tracker showing your real-time progress across Front-End a
   * 🍳 TheMealDB Recipe Vault
 * [x] **Asynchronous Loading States**: Spinner loaders & `setTimeout`
 * [x] **Cleanup Functions (Part 1)**: `clearTimeout` to prevent race conditions & memory leaks
-* [ ] **Recurring Timers (Part 2 - NEXT UP!)**: `setInterval` & `clearInterval` (Stopwatch / Countdown)
+* [x] **Recurring Timers (Part 2)**: `setInterval` & `clearInterval` (Cyber Stopwatch Challenge)
 
 ---
 
-## 🔮 Phase 6: Multi-Page Routing *(Upcoming)*
+## 🟡 Phase 6: Multi-Page Routing *(Current Unit 🧠⚡)*
 * [ ] **Lesson 7: Single Page Applications (`react-router`)**
   * Multi-view apps without page reloads
   * Setting up `<Routes>`, `<Route>`, `<Link>`, and `<NavLink>`
