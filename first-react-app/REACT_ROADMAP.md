@@ -7,17 +7,17 @@ A complete curriculum tracker showing your real-time progress across Front-End a
 ## 📊 Overall Progress Dashboard
 
 ### ⏱️ Time & Velocity Tracker (Hours & Days)
-* **Active Coding Time Spent:** **~20 to 23 Hours** *(logged across 16 coding sessions)*
-* **Front-End Hours Remaining:** **~6 to 8 Hours** *(~4 to 6 daily sessions)*
-* **Full-Stack Hours Remaining:** **~19 to 24 Hours** *(~13 to 16 daily sessions)*
+* **Active Coding Time Spent:** **~21 to 24 Hours** *(logged across 17 coding sessions)*
+* **Front-End Hours Remaining:** **~4 to 6 Hours** *(The Capstone Project!)*
+* **Full-Stack Hours Remaining:** **~17 to 22 Hours** *(~12 to 15 daily sessions)*
 
 ---
 
-### 🖥️ Front-End Mastery: **80%** Complete
-`[████████████████░░░░] 80%` (7 of 8 Milestones Completed — ~6-8 hours remaining)
+### 🖥️ Front-End Mastery: **88%** Complete
+`[█████████████████░░░] 88%` (7 of 8 Milestones Completed — ~4-6 hours remaining to Front-End finish line!)
 
-### 🌐 Full-Stack Mastery: **58%** Complete
-`[███████████░░░░░░░░░] 58%` (7 of 12 Total Units Completed — ~19-24 hours remaining)
+### 🌐 Full-Stack Mastery: **65%** Complete
+`[█████████████░░░░░░░] 65%` (8 of 12 Total Units Completed — ~17-22 hours remaining)
 
 ---
 
@@ -76,8 +76,8 @@ A complete curriculum tracker showing your real-time progress across Front-End a
 
 ---
 
-## 🟡 Phase 6: Multi-Page Routing *(Current Unit 🧠⚡)*
-* [ ] **Lesson 7: Single Page Applications (`react-router`)**
+## 🟢 Phase 6: Multi-Page Routing *(Completed ✅)*
+* [x] **Lesson 7: Single Page Applications (`react-router`)**
   * Multi-view apps without page reloads
   * Setting up `<Routes>`, `<Route>`, `<Link>`, and `<NavLink>`
   * URL params (`useParams`) and navigation (`useNavigate`)
