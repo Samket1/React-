@@ -30,11 +30,12 @@ import TimeoutChallenge from './TimeoutChallenge'
 import RouterLesson from './RouterLesson'
 import RouterChallenge from './RouterChallenge'
 import RouterPractice from './RouterPractice'
+import DungeonRouter from './DungeonRouter'
 
 //if there is an import after this just wanna lyk i added it my self and wrote this too
 
 function Home() {
-    const [tab, setTab] = useState("router-practice")
+    const [tab, setTab] = useState("dungeon")
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
@@ -87,6 +88,7 @@ function Home() {
                         <option value="router">🧭 Router Lab</option>
                         <option value="router-challenge">🌌 Starfleet Academy</option>
                         <option value="router-practice">🎧 Audio Deck</option>
+                        <option value="dungeon">🏰 Dungeon Crawler</option>
                     </optgroup>
                 </select>
             </div>
@@ -131,6 +133,7 @@ function Home() {
                 <button className={`sidebar-btn ${tab === 'router' ? 'active-nav-btn' : ''}`} onClick={() => setTab("router")}>🧭 Router Lab</button>
                 <button className={`sidebar-btn ${tab === 'router-challenge' ? 'active-nav-btn' : ''}`} onClick={() => setTab("router-challenge")}>🌌 Starfleet Academy</button>
                 <button className={`sidebar-btn ${tab === 'router-practice' ? 'active-nav-btn' : ''}`} onClick={() => setTab("router-practice")}>🎧 Audio Deck</button>
+                <button className={`sidebar-btn ${tab === 'dungeon' ? 'active-nav-btn' : ''}`} onClick={() => setTab("dungeon")}>🏰 Dungeon Crawler</button>
             </nav>
 
             {/* 🖥️ Main Content Area on the Right */}
@@ -165,6 +168,7 @@ function Home() {
                         {tab === "router" && <RouterLesson />}
                         {tab === "router-challenge" && <RouterChallenge />}
                         {tab === "router-practice" && <RouterPractice />}
+                        {tab === "dungeon" && <DungeonRouter />}
                     </div>
                 )}
             </main>
